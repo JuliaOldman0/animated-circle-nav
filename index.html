@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="circle">
+      <div class="outside">
+        <img src="images/label.png" alt="" />
+      </div>
+      <li style="--i: 0; --d: 0">
+        <a href=""><img src="images/outside/01.png" alt="" /></a>
+      </li>
+      <li style="--i: 1; --d: 0">
+        <a href=""><img src="images/outside/02.png" alt="" /></a>
+      </li>
+      <li style="--i: 3; --d: 0">
+        <a href=""><img src="images/outside/06.png" alt="" /></a>
+      </li>
+      <li style="--i: 4; --d: 0">
+        <a href=""><img src="images/outside/18.png" alt="" /></a>
+      </li>
+      <li style="--i: 5; --d: 0">
+        <a href=""><img src="images/outside/15.png" alt="" /></a>
+      </li>
+    </div>
+
+    <script>
+      let outside = document.querySelector(".outside");
+      let circle = document.querySelector(".circle");
+      outside.onclick = function () {
+        circle.classList.toggle("active");
+      };
+    </script>
+  </body>
 </html>
