@@ -34,14 +34,15 @@ body {
 .circle.active .outside {
   transform: rotate(360deg);
 }
-
+/* rotate(calc(360deg / 6 * var(--i)))
+*/
 .circle li {
   position: absolute;
-  left: 0;
+  /*left: 0;*/
   list-style: none;
   transition: 0.5s;
-  transform: rotate(calc(360deg / 6 * var(--i)));
-  transform-origin: 650px;
+  transform: translate(calc(1px * var(--x)), calc(1px * var(--y)));
+  /* transform-origin: 650px; */
   scale: 0;
   transition-delay: calc(0.05s * var(--i));
 }
@@ -53,12 +54,44 @@ body {
 .circle li a {
   position: relative;
   display: flex;
-  transform: rotate(calc(360deg / -6 * var(--i)));
+  /*transform: rotate(calc(360deg / -6 * var(--i)));*/
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.menu li:hover a {
-  font-size: 2.5em;
+.circle li:hover a .outsideOne {
+  transform: translate(0, -70px);
+  transition: 0.3s;
+  background-image: url(images/hover-outside/01.png);
+}
+
+.circle li:hover a .outsideOne {
+  transform: translate(0, -70px);
+  transition: 0.3s;
+  background-image: url(images/hover-outside/01.png);
+}
+
+.circle li:hover a .outsideTwo {
+  transform: translate(0, -70px);
+  transition: 0.3s;
+  background-image: url(images/hover-outside/02.png);
+}
+
+.circle li:hover a .outsideThree {
+  transform: translate(0, -70px);
+  transition: 0.3s;
+  background-image: url(images/hover-outside/06.png);
+}
+
+.circle li:hover a .outsideFour {
+  transform: translate(0, -70px);
+  transition: 0.3s;
+  background-image: url(images/hover-outside/18.png);
+}
+
+.circle li:hover a .outsideFive {
+  transform: translate(0, -70px);
+  transition: 0.3s;
+  background-image: url(images/hover-outside/15.png);
 }
