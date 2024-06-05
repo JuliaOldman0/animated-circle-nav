@@ -10,6 +10,7 @@
     <div class="circle">
       <div class="outside">
         <img src="images/label.png" id="main_label" alt="" />
+        <h1 id="main_text" class="hover_style"></h1>
       </div>
       <li style="--i: 0; --x: -450; --y: 0">
         <a href="#"
@@ -70,9 +71,13 @@
           (elem) => {
             id = elem.target.id;
             $("#main_label").hide();
-            $(".outside").html("<h1 class='hover_style'>" + id + "</h1>");
+            $("#main_text").text(id);
+            $("#main_text").show();
           },
-          () => {}
+          () => {
+            $("#main_text").hide();
+            $("#main_label").show();
+          }
         );
       });
     </script>
