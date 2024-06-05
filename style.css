@@ -95,3 +95,9 @@ body {
   transition: 0.3s;
   background-image: url(images/hover-outside/15.png);
 }
+
+.hover_style {
+  color: #ffb615;
+  font-size: 100px;
+  font-weight: 400;
+}

@@ -9,31 +9,72 @@
   <body>
     <div class="circle">
       <div class="outside">
-        <img src="images/label.png" alt="" />
+        <img src="images/label.png" id="main_label" alt="" />
       </div>
-      <li style="--i: 0; --x: -450; --y: 0" >
-        <a href="#"><img src="images/outside/01.png" alt="" class="outsideOne"/></a>
+      <li style="--i: 0; --x: -450; --y: 0">
+        <a href="#"
+          ><img
+            src="images/outside/01.png"
+            id="AI Power"
+            alt=""
+            class="outsideOne sector"
+        /></a>
       </li>
       <li style="--i: 1; --x: 10; --y: -193">
-        <a href="#"><img src="images/outside/02.png" alt="" class="outsideTwo"/></a>
+        <a href="#"
+          ><img
+            src="images/outside/02.png"
+            id="Process Design"
+            alt=""
+            class="outsideTwo sector"
+        /></a>
       </li>
       <li style="--i: 3; --x: 475; --y: -7">
-        <a href="#"><img src="images/outside/06.png" alt="" class="outsideThree"/></a>
+        <a href="#"
+          ><img
+            src="images/outside/06.png"
+            id="People Managment"
+            alt=""
+            class="outsideThree sector"
+        /></a>
       </li>
       <li style="--i: 4; --x: 283; --y: 227">
-        <a href="#"><img src="images/outside/18.png" alt="" class="outsideFour"/></a>
+        <a href="#"
+          ><img
+            src="images/outside/18.png"
+            id="Client Portal"
+            alt=""
+            class="outsideFour sector"
+        /></a>
       </li>
       <li style="--i: 5; --x: -247; --y: 230">
-        <a href="#"><img src="images/outside/15.png" alt="" class="outsideFive"/></a>
+        <a href="#"
+          ><img
+            src="images/outside/15.png"
+            id="Performance Optimization"
+            alt=""
+            class="outsideFive sector"
+        /></a>
       </li>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <script>
-      let outside = document.querySelector(".outside");
-      let circle = document.querySelector(".circle");
-      outside.onclick = function () {
-        circle.classList.toggle("active");
-      };
+      $(document).ready(() => {
+        let outside = document.querySelector(".outside");
+        let circle = document.querySelector(".circle");
+        outside.onclick = function () {
+          circle.classList.toggle("active");
+        };
+        $(".sector").hover(
+          (elem) => {
+            id = elem.target.id;
+            $("#main_label").hide();
+            $(".outside").html("<h1 class='hover_style'>" + id + "</h1>");
+          },
+          () => {}
+        );
+      });
     </script>
   </body>
 </html>
